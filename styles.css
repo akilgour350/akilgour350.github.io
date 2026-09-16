@@ -1,11 +1,11 @@
 @font-face {
-    font-family: Atmospheric;
-    src: url(/resources/fonts/aAtmospheric.ttf);
+    font-family: Xolonium-Bold;
+    src: url(/resources/fonts/Xolonium-Bold.otf);
 }
 
 @font-face {
-    font-family: Mono45-Regular;
-    src: url(/resources/fonts/Mono45Headline-Regular.ttf);
+    font-family: Xolonium-Regular;
+    src: url(/resources/fonts/Xolonium-Regular.otf);
 }
 
 @font-face {
@@ -40,25 +40,23 @@ body {
 
 /* BASICS */
 h1 {
-    font-family: Atmospheric;
+    font-family: Xolonium-Regular;
     font-size: 5rem;
-    color: var(--primary);
     margin: 0;
     padding: 2rem 1rem;
     text-align: center;
 }
 
 h2 {
-    font-size: 2rem;
-    font-family: Atmospheric;
+    font-size: 2.5rem;
+    font-family: Xolonium-Regular;
     margin-left: -1rem;
-    text-align: center;
 }
 
 h3 {
     font-size: 1.3rem;
     font-weight: bold;
-    font-family: Atmospheric;
+    font-family: Xolonium-Regular;
 }
 
 p a {
@@ -73,52 +71,48 @@ p a:hover {
 }
 
 /* NAVBAR */
-nav {
-    width: 100%;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     background-color: var(--dark);
-    height: 4rem;
-    letter-spacing: 0;
-    font-size: 0;
-    transition: opacity 0.3s;
-    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-nav img {
-    max-height: 3rem;
-    width: auto;
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
-}
-
-nav a {
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-}
-
-nav a:not(.navlogo) {
-    letter-spacing: normal;
-    font-size: 2rem;
-    padding-inline: 1.5rem;
-    height: 4rem;
-    transform: translateY(-2.13rem) skew(-15deg);
-    background-color: var(--dark);
-    transition: background-color 0.2s;
-}
-
-nav a:not(.navlogo) div {
-    font-family: Mono45-Regular;
+nav ul li a {
+    display: block;
     color: var(--light);
-    transform: translateY(0.7rem);
-    transition: transform 0.2s;
+    padding: .75rem;
+    text-decoration: none;
+    font-family: Xolonium-Regular;
+    transition: background-color 0.15s;
+    font-size: 1.2rem;
 }
 
-nav a:not(.navlogo):hover {
+nav ul li a:hover {
     background-color: var(--primary);
 }
 
-nav a:not(.navlogo):hover div {
-    transform: translateY(0.6rem);
+nav img {
+    max-height: 2rem;
+    width: auto;
+    padding-inline: 0.5rem;
+}
+
+nav ul li a .bi {
+    color: var(--primary);
+    transition: background-color .15s;
+    transform: translateY(0.125rem);
+}
+
+nav ul li a:hover .bi {
+    color: var(--light);
+}
+
+nav ul li a:hover img {
+    filter: brightness(100);
 }
 
 /* SCROLL TO TOP */
@@ -145,7 +139,6 @@ nav a:not(.navlogo):hover div {
 #scrollToTopBtn:hover {
     background-color: var(--primary);
     color: var(--light);
-    transform: translateY(-3px);
     border-color: var(--primary);
 }
 
@@ -165,7 +158,6 @@ nav a:not(.navlogo):hover div {
     background-image: url("/resources/images/panorama.jpg");
     margin-inline: 0 !important;
     padding-inline: 15%;
-
 }
 
 .banner .flexbox {
@@ -212,7 +204,7 @@ section {
 
 .flexbox {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     row-gap: 2rem;
     column-gap: 2rem;
@@ -238,10 +230,9 @@ section {
 
 .flexbox .flexcard {
     flex: 10%;
-    padding: 1rem;
+    padding: 0.25rem;
     background-color: var(--grey);
     text-align: center;
-    width: 10rem;
     min-width: 12rem;
     max-width: 12rem;
     border-radius: 5px;
@@ -260,21 +251,22 @@ section {
 }
 
 .flexbox .flexproj {
-    padding: 1rem;
+    padding-inline: 1rem;
+    padding-block: 2rem;
     flex: 49%;
-    max-width: 23.6rem;
+    max-width: 20rem;
     width: 100%;
     background-color: var(--grey);
     border-radius: 5px;
     text-align: center;
-    height: 25rem;
+    height: 23rem;
     transition: 0.5s;
     cursor: pointer;
 }
 
 .flexbox .flexproj:hover {
     transform: scale(1.03);
-    box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .flexbox .flexproj img {
@@ -282,7 +274,7 @@ section {
     height: auto;
     max-height: 15rem;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .flexbox .flexproj p {
@@ -307,7 +299,7 @@ section {
     flex: 10%;
     width: 5rem;
     height: 5rem;
-    transition: 0.3s ease-in-out; 
+    transition: 0.3s ease-in-out;
     object-fit: cover;
     border-radius: 3px;
 }
@@ -316,52 +308,137 @@ section {
     transform: scale(1.08);
 }
 
+#skills .flexbox {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+
+/* MISC */
+.blueloch-dev {
+    background-color: #005EB8;
+    color: var(--light);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-block: 1rem;
+}
+
+.blueloch-dev p {
+    margin: 0;
+}
+
+.blueloch-dev a {
+    color: var(--dark);
+}
+
+.blueloch-dev a:hover {
+    color: var(--grey);
+    text-decoration: underline;
+}
 
 /* SCALING */
-@media only screen and (max-width: 1000px) {
-    nav {
-        text-align: center;
-        height: 4rem;
-    }
-
+@media only screen and (max-width: 800px) {
     nav img {
-        height: 3rem;
+        display: none;
     }
 
-    nav a:not(.navlogo) {
-        font-size: 1.7rem;
-        transform: translateY(-2.7rem) skew(-15deg);
+    nav ul li a {
+        text-align: center;
+        font-size: 0.6rem;
     }
 
-    nav a:not(.navlogo) div {
-        transform: translateY(1.3rem);
+    nav ul li a svg {
+        width: 100%;
+        height: 0.8rem;
+        margin-bottom: 3px;
     }
 
-    nav a:not(.navlogo):hover div {
-        transform: translateY(0.85rem);
+    .banner,
+    .about,
+    .contact {
+        padding-inline: 5%;
+    }
+
+    section {
+        padding-block: 1rem;
+        margin-inline: 1rem;
+        width: 90%;
+    }
+
+    #scrollToTopBtn img {
+        max-width: 1.2rem;
+        max-height: 1.2rem;
+    }
+
+    .flexbox {
+        justify-content: center;
+    }
+
+    .flexbox .flextext {
+        flex: 100%;
+        text-align: left;
+    }
+
+    .flexbox .flextext p {
+        font-size: 0.8rem;
+    }
+
+    .flexbox .flextext h2 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .about .flexbox {
+        padding: 0;
+    }
+
+    .banner .flexbox,
+    .about .flexbox {
+        padding-inline: 0.5rem;
+        border-radius: 5px;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2rem;
+        margin-left: 0;
     }
 
-    p {
-        font-size: 2rem;
+    h1 {
+        font-size: 3rem;
+        padding: 2rem 1rem;
+    }
+
+    .flexbox>img {
+        height: auto;
+        max-width: 100%;
+        padding: 1rem;
+        border-radius: 25px;
+    }
+
+    .flexbox {
+        gap: 0.5rem;
     }
 
     .flexbox .flexproj {
-        height: 34rem;
+        padding-inline: 0.5rem;
+        padding-block: 1rem;
+        flex: 30%;
+        max-width: 14.5rem;
+        height: 20rem;
     }
 
-    .flexbox .flexproj h3 {
-        font-size: 2rem;
+    .flexbox .flexproj img {
+        max-width: 10rem;
+        height: auto;
+        max-height: 10rem;
+        border-radius: 5px;
+        object-fit: contain;
     }
 
-    .flexbox .flexproj p {
-        font-size: 1.5rem;
-    }
-    
-    .flexbox .flexproj ul {
-        font-size: 1.2rem;
+    .contact h2 {
+        text-align: center;
     }
 }

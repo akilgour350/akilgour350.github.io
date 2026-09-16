@@ -22,7 +22,7 @@
 
     <link rel="icon" href="/resources/images/akilgour.png" />
     <title>Alastair Kilgour</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/scripts.js"></script>
 
@@ -76,7 +76,7 @@
                     Projects
                 </a>
             </li>
-            <li>
+            <li style="float: right;">
                 <a href="/index.html#contact">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -91,24 +91,24 @@
 
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top"><img src="/resources/images/top.svg"></button>
 
-    <section class="banner">
+    <section class="banner" style="background-image: url('/resources/images/banners/glasgowlanding.jpg');">
         <div class="flexbox">
             <div class="flextext">
-                <h2>Hi there!</h2>
-                <p>
-                    I'm Alastair Kilgour, a software developer from Glasgow. I work with all types of software,
-                    front-end to back-end, in mobile, desktop, web and server environments.
-                </p>
+                <h1>RedAgile App</h1>
             </div>
 
-            <img loading="lazy" src="/resources/images/portrait.png">
+            <img loading="lazy" src="/resources/images/projects/redagile.png">
         </div>
     </section>
 
-    <section id="skills" style="margin-top: 0; padding-top: 0;">
-        <h2>Skills</h2>
+    <section class="blueloch-dev">
+        <p>This app was developed under <a href="https://blueloch.akilgour.com">BlueLoch</a>. You can see the original
+            webpage on the archive site <a
+                href="https://blueloch.akilgour.com/pages/software/clients/redagile.html">here</a>.</p>
+    </section>
 
-        <h3>Languages</h3>
+    <section id="skills">
+        <h2>Involved Skills</h2>
         <div class="flexbox">
             <div class="flexcard">
                 <img loading="lazy" src="/resources/images/skills/csharp.png">
@@ -116,170 +116,46 @@
             </div>
 
             <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/java.png">
-                <h3>Java</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/cpp.png">
-                <h3>C++</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/vb.webp">
-                <h3>Visual Basic</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/python.png">
-                <h3>Python</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/html.png">
-                <h3>HTML</h3>
+                <img loading="lazy" src="/resources/images/skills/blazor.png">
+                <h3>Blazor</h3>
             </div>
 
             <div class="flexcard">
                 <img loading="lazy" src="/resources/images/skills/css.png">
                 <h3>CSS</h3>
             </div>
-        </div>
-
-        <h3>Databases</h3>
-        <div class="flexbox">
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/sqlite.png">
-                <h3>SQLite</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/ef.png">
-                <h3>Entity Framework</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/postgresql.png">
-                <h3>PostgreSQL</h3>
-            </div>
-        </div>
-
-        <h3>Misc.</h3>
-        <div class="flexbox">
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/blazor.png">
-                <h3>Blazor</h3>
-            </div>
 
             <div class="flexcard">
                 <img loading="lazy" src="/resources/images/skills/dotnet-robot.png">
                 <h3>.NET MAUI</h3>
             </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/git.png">
-                <h3>Git</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/aws.jpg">
-                <h3>AWS</h3>
-            </div>
-
-            <div class="flexcard">
-                <img style="max-width: 100%;" loading="lazy" src="/resources/images/skills/docker.png">
-                <h3>Docker</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/proxmox.png">
-                <h3>Proxmox</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/ansible.png">
-                <h3>Ansible</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/kubernetes.png">
-                <h3>Kubernetes</h3>
-            </div>
-
-            <div class="flexcard">
-                <img loading="lazy" src="/resources/images/skills/jenkins.png">
-                <h3>Jenkins</h3>
-            </div>
         </div>
-
 
         <br>
     </section>
 
-    <section class="about" id="about">
+    <section class="about" id="about" style="background-image: url('/resources/images/banners/stonehaven.jpg');">
         <div class="flexbox">
             <div class="flextext">
-                <h2>About Me</h2>
+                <h2>About the App</h2>
                 <p>
-                    I'm a passionate programmer who loves to create fun and useful software. I spend much of my free
-                    time developing apps, websites, and code to run on my own personal server.
-                </p>
-                <p>
-                    In 2023 I founded <a href="https://blueloch.akilgour.com">BlueLoch Software Solutions</a> together
-                    with some friends from uni. There I developed the company's website, worked on apps for in-house and
-                    clients, and handled much of the filing of company paperwork with Companies House.
+                    The RedAgile app was developed alongside the other members of the BlueLoch team for <a
+                        href="https://www.redagile.com/">RedAgile</a>. Initially envisioned as an all-encompassing VLE,
+                    the first release included a simple Planning Poker game running on Android and iOS devices.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+    <section id="gallery">
+        <h2>Screenshots</h2>
         <div class="flexbox">
-            <a class="no-style" href="https://blueloch.akilgour.com" target="_blank">
-                <div class="flexproj">
-                    <img loading="lazy" src="/resources/images/projects/blueloch.png">
-                    <h3>BlueLoch Website</h3>
-                    <p>
-                        The former website for BlueLoch, my company. Designed and developed almost entirely by me!
-                    </p>
-                </div>
-            </a>
-
-            <a class="no-style" href="/pages/feelsync.html">
-                <div class="flexproj">
-                    <img loading="lazy" src="/resources/images/projects/feelsync.svg">
-                    <h3>FeelSync</h3>
-                    <p>
-                        A free mental health app designed to help users track their mood, thoughts and emotions!
-                    </p>
-                </div>
-            </a>
-
-            <a class="no-style" href="/pages/redagile.html">
-                <div class="flexproj">
-                    <img loading="lazy" style="width: 100%;" src="/resources/images/projects/redagile.png">
-                    <h3>RedAgile</h3>
-                    <p>
-                        A custom app built for RedAgile to work alongside their Agile and Scrum courses!
-                    </p>
-                </div>
-            </a>
+            <img src="/resources/images/projects/redagile/redagile-planning-poker.png" loading="lazy" />
+            <img src="/resources/images/projects/redagile/redagile-poker-popup.png" loading="lazy" />
+            <img src="/resources/images/projects/redagile/redagile-contact.png" loading="lazy" />
         </div>
-    </section>
 
-    <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <div class="flexbox">
-            <a href="mailto:akilgour350@gmail.com" target="_blank">
-                <img class="flexctact" src="/resources/images/contacts/email.svg">
-            </a>
-
-            <a href="https://linkedin.com/in/akilgour350" target="_blank">
-                <img class="flexctact" src="/resources/images/contacts/linkedin.svg">
-            </a>
-
-        </div>
+        <br>
     </section>
 </body>
 
