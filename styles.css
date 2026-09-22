@@ -317,7 +317,7 @@ section {
 
 
 /* MISC */
-.blueloch-dev {
+.blueloch-dev, .github {
     background-color: #005EB8;
     color: var(--light);
     text-align: center;
@@ -326,7 +326,12 @@ section {
     padding-block: 1rem;
 }
 
-.blueloch-dev p {
+.github {
+    background-color: var(--grey);
+    color: var(--text);
+}
+
+.blueloch-dev p, .github-dev p {
     margin: 0;
 }
 
@@ -337,6 +342,11 @@ section {
 .blueloch-dev a:hover {
     color: var(--grey);
     text-decoration: underline;
+}
+
+.github p img {
+    max-width: 3rem;
+    height: auto;
 }
 
 /* SCALING */
