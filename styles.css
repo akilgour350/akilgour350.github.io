@@ -317,7 +317,7 @@ section {
 
 
 /* MISC */
-.blueloch-dev, .github {
+.blueloch-dev, .github, .solo-dev {
     background-color: #005EB8;
     color: var(--light);
     text-align: center;
@@ -331,7 +331,12 @@ section {
     color: var(--text);
 }
 
-.blueloch-dev p, .github-dev p {
+.solo-dev {
+    background-color: var(--text);
+    color: var(--light);
+}
+
+.blueloch-dev p, .github-dev p, .solo-dev p {
     margin: 0;
 }
 
